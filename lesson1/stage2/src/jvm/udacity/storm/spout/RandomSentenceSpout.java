@@ -26,11 +26,11 @@ public class RandomSentenceSpout extends BaseRichSpout {
   public void nextTuple() {
     Utils.sleep(100);
     String[] sentences = new String[]{
-      "the cow jumped over the moon",
-      "an apple a day keeps the doctor away",
-      "four score and seven years ago",
-      "snow white and the seven dwarfs",
-      "i am at two with nature"
+      "Hey there, brother, watch your little lady",
+      "She's a little faster than you think",
+      "Hey there, brother, watch your little lady",
+      "She'll be sneaking 'round every time you blink",
+      "Now I don't know if she got my number"
       };
     String sentence = sentences[_rand.nextInt(sentences.length)];
     _collector.emit(new Values(sentence));
